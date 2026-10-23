@@ -5,12 +5,11 @@ const api = axios.create({
   headers: { "X-API-Key": import.meta.env.VITE_API_KEY },
 })
 
-// Pega a mensagem de erro que veio da API (campo "detail")
 export function mensagemErro(erro) {
   const detail = erro.response?.data?.detail
 
   if (!erro.response) return "Não foi possível conectar à API."
-  if (Array.isArray(detail)) return detail.map((d) => d.msg).join(", ") // erro 422
+  if (Array.isArray(detail)) return detail.map((d) => d.msg).join(", ") 
   if (typeof detail === "string") return detail
   if (erro.response.status === 401) return "Chave inválida. Verifique sua chave."
   return "Ocorreu um erro."

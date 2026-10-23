@@ -10,7 +10,6 @@ export default function Detalhe() {
   const [carregando, setCarregando] = useState(true)
   const [erro, setErro] = useState("")
 
-  // campo usado na próxima etapa: responsável (iniciar) ou solução (resolver)
   const [texto, setTexto] = useState("")
 
   useEffect(() => {
@@ -81,7 +80,7 @@ export default function Detalhe() {
         <button className="vermelho" onClick={excluir}>Excluir</button>
       </div>
 
-      {/* mostra só a ação que vale para o status atual */}
+      {}
       {chamado.status !== "resolvido" && (
         <form onSubmit={proximaEtapa} className="etapa">
           <h2>Próxima etapa</h2>

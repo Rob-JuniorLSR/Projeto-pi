@@ -2,11 +2,10 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import api, { mensagemErro } from "../services/api"
 
-// Este mesmo componente serve para abrir (/novo) e editar (/editar/:id)
 export default function Formulario() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const editando = Boolean(id) // se tem id na rota, é edição
+  const editando = Boolean(id) 
 
   const [titulo, setTitulo] = useState("")
   const [descricao, setDescricao] = useState("")
@@ -32,7 +31,6 @@ export default function Formulario() {
         setLocais(l.data)
         setPrioridades(p.data)
 
-        // se for edição, preenche os campos com o chamado atual
         if (editando) {
           const resposta = await api.get(`/chamados/${id}`)
           const c = resposta.data

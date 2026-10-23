@@ -8,7 +8,6 @@ import Formulario from "./pages/Formulario"
 export default function App() {
   const [dono, setDono] = useState(null)
 
-  // Busca o nome do dono da chave para mostrar no topo
   useEffect(() => {
     async function carregarDono() {
       try {

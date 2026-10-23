@@ -7,19 +7,16 @@ export default function Home() {
   const [carregando, setCarregando] = useState(true)
   const [erro, setErro] = useState("")
 
-  // busca e filtros
   const [busca, setBusca] = useState("")
   const [status, setStatus] = useState("")
   const [tipo, setTipo] = useState("")
   const [local, setLocal] = useState("")
   const [prioridade, setPrioridade] = useState("")
 
-  // listas para preencher os filtros
   const [tipos, setTipos] = useState([])
   const [locais, setLocais] = useState([])
   const [prioridades, setPrioridades] = useState([])
 
-  // carrega as listas dos filtros (só uma vez)
   useEffect(() => {
     async function carregarListas() {
       try {
@@ -36,13 +33,12 @@ export default function Home() {
     carregarListas()
   }, [])
 
-  // carrega os chamados de novo sempre que a busca ou algum filtro mudar
   useEffect(() => {
     async function carregarChamados() {
       setCarregando(true)
       setErro("")
       try {
-        // só envia os filtros que foram preenchidos
+
         const params = {}
         if (busca) params.busca = busca
         if (status) params.status = status
