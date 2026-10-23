@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f0;
+  color: #222;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  color: inherit;
+}
+
+.topo {
+  background: #2563EB;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topo a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0 12px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+textarea {
+  height: 80px;
+}
+
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button,
+.botao {
+  background: #2563EB;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.vermelho {
+  background: #b3382c;
+}
+
+.card {
+  display: block;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.card span {
+  display: block;
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.etapa {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 14px;
+  margin-top: 20px;
+}
+
+.erro {
+  color: #b3382c;
+}
+
+.sucesso {
+  color: #2e7d32;
+}
